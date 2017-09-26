@@ -2,6 +2,12 @@ package edu.luc.cs.cs271.lab2;
 
 /** A sports team. */
 public class Team {
+  //* Method for DRY exercise */
+  public void display(){
+    System.out.println("Name: " + name);
+    System.out.println("Head coach: " + headcoach);
+    System.out.println("Funding: " + funding);
+  }
   /** The team's name. */
   private String name;
 
@@ -16,26 +22,38 @@ public class Team {
     if (name == null) {
       throw new IllegalArgumentException("name is null");
     }
-    // TODO validity checking for headcoach
-    // TODO validity checking for funding
+    // TODO validity checking for headcoach done
+     if(headcoach == null) {
+      throw new IllegalArgumentException("headcoach is null");
+    }
+    // TODO validity checking for funding done
+      if (funding == 0) {
+      throw new IllegalArgumentException("funding is zero");
+    }
+
+
+
     this.name = name;
-    // TODO complete this constructor
+    // Done complete this constructor
+    this.headcoach= headcoach;
+    this.funding=funding;
   }
 
   /** Returns the team's name. */
   public String getName() {
-    return this.name;
+    return name;
   }
 
   /** Returns the team's head coach. */
   public String getHeadcoach() {
-    // TODO complete this method
-    return null;
+    // Done complete this method
+    return headcoach;
   }
 
   /** Returns the team's funding level. */
   public int getFunding() {
-    // TODO complete this method
-    return -1;
+    // Done complete this method
+    return funding;
   }
+
 }
