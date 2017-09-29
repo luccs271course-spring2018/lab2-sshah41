@@ -4,7 +4,7 @@
     findTeamPosition= n
     findTeamPosition(list)= n
     findTeamMinFunding= n
-    findTeamMinFundingFast n^2
+    findTeamMinFundingFast= n^2
 - What happens in the case of binary search if the array is not sorted?
     The search will not work. Anytime it eliminates one half of the data it could be the half with
     the file we are looking for.
